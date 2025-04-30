@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alight Motion Premium - Murah & Berkualitas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e88e5;
+            --secondary: #64b5f6;
+            --dark: #0d47a1;
+            --light: #e3f2fd;
+            --accent: #ff4081;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f9ff;
+            color: #333;
+            background-image: url('https://f.top4top.io/p_3407tjado0.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(245, 249, 255, 0.9);
+        }
+        
+        .anime-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.9), rgba(230, 245, 255, 0.9));
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(30, 136, 229, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(30, 136, 229, 0.2);
+        }
+        
+        .anime-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(30, 136, 229, 0.3);
+        }
+        
+        .anime-card .card-header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            font-weight: bold;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .anime-card .card-header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: -20px;
+            width: 150%;
+            height: 100px;
+            background: rgba(255,255,255,0.15);
+            transform: rotate(-5deg);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price::before {
+            content: "Rp";
+            font-size: 1rem;
+            position: absolute;
+            left: -25px;
+            top: 10px;
+        }
+        
+        .btn-wa {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-wa:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            color: white;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.7rem 0;
+            border-bottom: 1px solid rgba(30, 136, 229, 0.1);
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+        }
+        
+        .anime-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://f.top4top.io/p_3407tjado0.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 0.1;
+        }
+        
+        .anime-title {
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .anime-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70%;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .nav-pills .nav-link.active {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--dark);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-play-circle me-2"></i> Alight Motion Premium
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#paket">Paket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fitur">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimoni">Testimoni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4 anime-title">Alight Motion <span class="text-warning">Premium</span></h1>
+                    <p class="lead mb-4">Buat video trending keren dengan fitur premium tanpa batas! Akses semua fitur eksklusif dengan harga terjangkau.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#paket" class="btn btn-light btn-lg px-4">
+                            <i class="fas fa-gem me-2"></i> Lihat Paket
+                        </a>
+                        <a href="https://wa.me/6283876119198?text=Halo,%20Kak%20Saya%20Mau%20Tanya%20Tanya%20Tentang%20Alight%20Motion%20Premium%20Bisa?" class="btn btn-wa btn-lg px-4">
+                            <i class="fab fa-whatsapp me-2"></i> Konsultasi
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="https://i.imgur.com/JrQZ3Xk.png" alt="Alight Motion Preview" class="img-fluid" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paket Section -->
+    <section id="paket" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold position-relative anime-title">Pilihan Paket</h2>
+            <div class="row justify-content-center">
+                <!-- Paket 1 Bulan -->
+                <div class="col-md-5">
+                    <div class="anime-card h-100">
+                        <div class="card-header">
+                            <h3>Paket 1 Bulan</h3>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <div class="price mb-2">5.000</div>
+                            <p class="text-muted">/bulan</p>
+                            <ul class="feature-list text-start my-4">
+                                <li>Akses semua fitur premium</li>
+                                <li>Tanpa watermark</li>
+                                <li>Export kualitas tinggi</li>
+                                <li>Garansi 5 Bulan</li>
+                                <li>Support 24/7</li>
+                            </ul>
+                            <a href="https://wa.me/6283876119198?text=Saya%20ingin%20membeli%20Paket%201%20Bulan%20Alight%20Motion%20Premium%20seharga%20Rp%205.000" class="btn btn-wa btn-lg w-100 mt-3">
+                                <i class="fab fa-whatsapp me-2"></i> Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paket 1 Tahun -->
+                <div class="col-md-5">
+                    <div class="anime-card h-100">
+                        <div class="card-header position-relative">
+                            <div class="anime-badge">HEMAT 58%</div>
+                            <h3>Paket 1 Tahun</h3>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <div class="price mb-2">10.000</div>
+                            <p class="text-muted">/tahun</p>
+                            <ul class="feature-list text-start my-4">
+                                <li>Akses semua fitur premium</li>
+                                <li>Tanpa watermark</li>
+                                <li>Export kualitas tinggi</li>
+                                <li>Garansi Seumur hidup</li>
+                                <li>Support 24/7</li>
+                                <li>Bonus tutorial eksklusif</li>
+                            </ul>
+                            <a href="https://wa.me/6283876119198?text=Saya%20ingin%20membeli%20Paket%201%20Tahun%20Alight%20Motion%20Premium%20seharga%20Rp%2010.000" class="btn btn-wa btn-lg w-100 mt-3">
+                                <i class="fab fa-whatsapp me-2"></i> Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fitur Section -->
+    <section id="fitur" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold position-relative anime-title">Fitur Premium</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="mb-3">Tanpa Watermark</h4>
+                            <p>Hasil export video tanpa watermark yang mengganggu, profesional untuk karya Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-film"></i>
+                            </div>
+                            <h4 class="mb-3">Kualitas HD</h4>
+                            <p>Export video dengan kualitas tinggi hingga 1080p untuk hasil yang tajam dan jernih.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h4 class="mb-3">Layer Unlimited</h4>
+                            <p>Tambah layer tanpa batas untuk proyek kompleks dan kreativitas tanpa hambatan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4 class="mb-3">Efek Premium</h4>
+                            <p>Akses ke semua efek premium dan template eksklusif untuk karya spektakuler.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h4 class="mb-3">Render Cepat</h4>
+                            <p>Proses rendering yang dipercepat untuk menghemat waktu Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4 text-center">
+                            <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; font-size: 2rem;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4 class="mb-3">Support 24/7</h4>
+                            <p>Tim support siap membantu kapan saja melalui WhatsApp dan Telegram.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold position-relative anime-title">Testimoni Pengguna</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://b.top4top.io/p_3407wfrsw2.jpg" class="rounded-circle me-3" width="60" alt="">
+                                <div>
+                                    <h5 class="mb-0">Reiman Osaka</h5>
+                                    <small class="text-muted">Content Creator</small>
+                                </div>
+                            </div>
+                            <p>"Gg bang, pelayanan cepet & no tipu tipu intinya satset dah, auto langganan disini 😁👍."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://l.top4top.io/p_34075oy840.jpg" class="rounded-circle me-3" width="60" alt="">
+                                <div>
+                                    <h5 class="mb-0">Letto</h5>
+                                    <small class="text-muted">Editor Video</small>
+                                </div>
+                            </div>
+                            <p>"Akhirnya bisa bikin animasi keren tanpa watermark. Harganya murah banget untuk fitur segini lengkap!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="anime-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="https://a.top4top.io/p_3407iounk1.jpg" class="rounded-circle me-3" width="60" alt="">
+                                <div>
+                                    <h5 class="mb-0">Reno Wahyu</h5>
+                                    <small class="text-muted">Youtuber</small>
+                                </div>
+                            </div>
+                            <p>"Satset banget pelayanan nya cuman beberapa menit udah di proses gg bang."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold position-relative anime-title">Pertanyaan Umum</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="anime-card mb-3">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-start text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                        <i class="fas fa-question-circle me-2"></i> Bagaimana cara pembeliannya?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Klik tombol "Pesan Sekarang" pada paket yang Anda inginkan, kemudian Anda akan diarahkan ke WhatsApp kami. Lakukan pembayaran dan kami akan mengirimkan akun premiumnya dalam waktu maksimal 1x24 jam.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anime-card mb-3">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-start text-decoration-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                        <i class="fas fa-question-circle me-2"></i> Metode pembayaran apa saja yang diterima?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Kami menerima pembayaran via transfer bank (BCA, BRI, Mandiri, BNI), Dana, OVO, Gopay, ShopeePay, dan QRIS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anime-card mb-3">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-start text-decoration-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                        <i class="fas fa-question-circle me-2"></i> Apakah ini akun shared atau private?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Kami menyediakan akun private yang hanya bisa digunakan oleh 1 device saja, sehingga lebih aman dan stabil.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="anime-card mb-3">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link w-100 text-start text-decoration-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                        <i class="fas fa-question-circle me-2"></i> Bagaimana jika ada masalah dengan akunnya?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-parent="#faqAccordion">
+                                <div class="card-body">
+                                    Tim support kami siap membantu 24/7 via WhatsApp. Biasanya respon dalam 1-2 jam maksimal. Garansi replacement jika ada masalah teknis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 text-white" style="background: linear-gradient(135deg, var(--primary), var(--dark));">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">Siap Upgrade ke Versi Premium?</h2>
+            <p class="lead mb-4">Dapatkan semua fitur eksklusif dengan harga terjangkau</p>
+            <a href="https://wa.me/6283876119198?text=Saya%20ingin%20membeli%20Alight%20Motion%20Premium" class="btn btn-light btn-lg px-5">
+                <i class="fab fa-whatsapp me-2"></i> Pesan Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-white" style="background-color: var(--dark);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5><i class="fas fa-play-circle me-2"></i> Alight Motion Premium</h5>
+                    <p>Solusi hemat untuk mendapatkan akun Alight Motion Premium dengan fitur lengkap dan harga terjangkau.</p>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fab fa-whatsapp me-2"></i> +62 838-7611-9298</li>
+                        <li><i class="fas fa-envelope me-2"></i> andikagendel11@mail.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Sosial Media</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-telegram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Andika Pratama. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</body>
+</html>
